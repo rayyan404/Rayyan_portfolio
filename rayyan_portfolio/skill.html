@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Skills - Unique Style</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+    background:#0f172a;
+    color:#fff;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Navbar */
+.navbar{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+.navbar .logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+.navbar .nav-links{
+    display:flex;
+    gap:30px;
+}
+.navbar .nav-links a{
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    transition:.3s;
+    position:relative;
+}
+.navbar .nav-links a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#38bdf8;
+    left:0;
+    bottom:-6px;
+    transition:.3s;
+}
+.navbar .nav-links a:hover{
+    color:#38bdf8;
+}
+.navbar .nav-links a:hover::after{
+    width:100%;
+}
+
+/* Skills Section */
+.skills-section{
+    margin-top:120px;
+    padding:40px;
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.skills-section h2{
+    font-size:42px;
+    margin-bottom:20px;
+    position:relative;
+}
+.skills-section h2::after{
+    content:"";
+    position:absolute;
+    width:80px;
+    height:4px;
+    background:#38bdf8;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:2px;
+}
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+.skill-card{
+    background:rgba(255,255,255,0.08);
+    border-radius:16px;
+    padding:25px;
+    text-align:left;
+    backdrop-filter:blur(12px);
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    transition:.3s;
+}
+.skill-card:hover{
+    transform:translateY(-8px);
+}
+.skill-card i{
+    font-size:35px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+.skill-card h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+.progress-bar{
+    background:#1e293b;
+    border-radius:10px;
+    height:14px;
+    overflow:hidden;
+    margin-top:8px;
+}
+.progress{
+    background:#38bdf8;
+    height:14px;
+    width:0;
+    border-radius:10px;
+    transition:width 1s ease-in-out;
+}
+.skill-card p{
+    font-size:16px;
+    margin-top:10px;
+    color:#cbd5e1;
+}
+
+/* Animate Progress Bars */
+.skill-card:hover .progress{
+    width:var(--progress);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo"><i class="fas fa-code"></i> Rayyan</div>
+    <div class="nav-links">
+        <a href="Rayyanportfolio.html">Home</a>
+        <a href="About-me.html">About</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- Skills Section -->
+<section class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card" style="--progress:90%;">
+            <i class="fab fa-html5"></i>
+            <h3>HTML</h3>
+            <div class="progress-bar"><div class="progress"></div></div>
+            <p>Experienced in creating clean, semantic, and SEO-friendly HTML structures for modern websites.</p>
+        </div>
+        <div class="skill-card" style="--progress:85%;">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <div class="progress-bar"><div class="progress"></div></div>
+            <p>Expert in building responsive layouts with CSS Flexbox, Grid, and advanced animations.</p>
+        </div>
+        <div class="skill-card" style="--progress:75%;">
+            <i class="fab fa-js-square"></i>
+            <h3>JavaScript</h3>
+            <div class="progress-bar"><div class="progress"></div></div>
+            <p>Proficient in DOM manipulation, event handling, and creating interactive features.</p>
+        </div>
+        <div class="skill-card" style="--progress:70%;">
+            <i class="fab fa-react"></i>
+            <h3>React</h3>
+            <div class="progress-bar"><div class="progress"></div></div>
+            <p>Building dynamic, component-based user interfaces with React and hooks.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
